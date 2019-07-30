@@ -1,16 +1,27 @@
 package com.example.toastlib;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
+import android.provider.Settings;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.content.Context.WINDOW_SERVICE;
+import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 public class KoushikToast {
 
@@ -21,11 +32,27 @@ public class KoushikToast {
     static  WindowManager.LayoutParams params;
     static long duration=1000;
 
+Context con1;
 
 
-    public  static  KoushikToast makeText(Context con, String text,int duration_in_seconds)
+    @TargetApi(Build.VERSION_CODES.M)
+    public static boolean chkforpermission(Context con)
+    {
+        if(!Settings.canDrawOverlays(con)){
+
+
+            return false;
+
+        }
+       return true;
+    }
+
+
+    public  static  KoushikToast makeText(Context con, String text, int duration_in_seconds)
     {
         //KoushikToast kt = new KoushikToast(con);
+
+
 
         duration=duration_in_seconds*1000;
 
@@ -61,8 +88,14 @@ public class KoushikToast {
 
 
     public static  void handleShow() {
+try {
+    mWindowManager.addView(mLayout, params);
+}
+    catch (Exception e)
+    {
+        Toast.makeText(mLayout.getContext(),"you need a android.permission.SYSTEM_ALERT_WINDOW permission in your app ",Toast.LENGTH_LONG).show();
+    }
 
-        mWindowManager.addView(mLayout, params);
     }
 
     public static void handleHide() {

@@ -16,8 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.toastlib.KoushikToast;
-import com.koushik.toastlast.Service.Chkwindow_Service;
-import com.koushik.toastlast.Service.LocalService;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,15 +37,8 @@ public class MainActivity extends AppCompatActivity {
     public void onclick(View view) {
 
 
+        KoushikToast.makeText(this,"service test",3).show();
 
-        //KoushikToast.makeText(this,"text text",4).show();
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(new Intent(this, LocalService.class));
-        }
-        else {
-            startService(new Intent(this,Chkwindow_Service.class));
-        }
 
 
     }

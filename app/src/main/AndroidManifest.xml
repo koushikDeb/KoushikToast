@@ -18,8 +18,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".Service.Chkwindow_Service"/>
-        <service android:name=".Service.LocalService"/>
+
     </application>
 
 </manifest>
