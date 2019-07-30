@@ -56,6 +56,7 @@ public class LocalService extends Service {
      * Show a dialog while this service is running.
      */
     private void showDialog() {
+
         KoushikToast.makeText(this,"service test",3).show();
     }
 }
