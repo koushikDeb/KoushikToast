@@ -6,12 +6,12 @@ KoushikToast.makeText(this,"toast text",10).show();
 ```
 
 ## Getting Started
-You Will need SYSTEM_ALERT_WINDOW perission as I am using Windowmanager.
+You Will need SYSTEM_ALERT_WINDOW permission as I am using Windowmanager.
 
 
 ### Prerequisites
 
-You Will need SYSTEM_ALERT_WINDOW perission
+You Will need SYSTEM_ALERT_WINDOW permission
 Add it in menifest
 ```
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
