@@ -65,7 +65,7 @@ And
 
 ```
 dependencies {
-	        implementation 'com.github.koushikDeb:KoushikToast:v1.5'
+	        implementation 'com.github.koushikDeb:KoushikToast:v1.6'
 	}
 ```
 
