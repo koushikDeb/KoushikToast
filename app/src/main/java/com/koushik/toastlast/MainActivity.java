@@ -34,14 +34,22 @@ public class MainActivity extends AppCompatActivity {
         {
             case 0 :  KoushikToast.makeText(this,"Default Toast",3).show();
                 break;
-            case 1 :  KoushikToast.makeText(this,"Drawable background Toast",5).setBackgroundDrawable(R.drawable.default_shape).show();
+            case 1 :  KoushikToast.makeText(this,"Drawable background Toast",5).setBackgroundDrawable(R.drawable.default_shape2).show();
                 break;
             case 2 :  KoushikToast.makeText(this,"Drawable background Toast with  text color black",5).setBackgroundDrawable(R.drawable.default_shape2).setTextColor(android.R.color.black).show();
                 break;
             case 3 :  KoushikToast.makeText(this,"Color background Toast white text",5).setBackgroundColor(R.color.colorAccent).setTextColor(android.R.color.white).show();
                 break;
-            case 5 :  KoushikToast.makeText(this,"Color background Toast",5).setBackgroundColor(R.color.colorAccent).show();
+            case 4 :  KoushikToast.makeText(this,"Color background Toast",5).setBackgroundColor(R.color.colorAccent).show();
                 break;
+            case 5 :  KoushikToast.makeText(this,"",5).setBackgroundDrawable(R.drawable.git).show();
+                break;
+            case 6 :  KoushikToast.makeText(this,"",5).setBackgroundDrawable(R.drawable.angry).show();
+                break;
+            case 7 :  KoushikToast.makeText(this,"Toast With Love",5).setToastIcon(R.drawable.ic_favorite_black_24dp).show();
+                break;
+
+
         }
 
 
@@ -75,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
- if(clicked==5)
+ if(clicked==7)
  {
      clicked=0;
  }else {

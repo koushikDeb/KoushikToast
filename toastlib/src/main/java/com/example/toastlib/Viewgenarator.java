@@ -20,7 +20,7 @@ public class Viewgenarator {
 
 
 
-static ViewHoder currentviewholder;
+    static ViewHoder currentviewholder;
 
 
     public static View customview(Context con, String text)
@@ -33,7 +33,10 @@ static ViewHoder currentviewholder;
 
         ViewHoder vh =new ViewHoder(mLayout);
         vh.getTexttoast().setText(text);
-//vh.getToast_type().setBackground((R.drawable.default_shape));
+        vh.getToast_type().setBackground(con.getResources().getDrawable(R.drawable.default_shape));
+        vh.getToastIcon().setVisibility(View.GONE);
+
+
         currentviewholder=vh;
 
 

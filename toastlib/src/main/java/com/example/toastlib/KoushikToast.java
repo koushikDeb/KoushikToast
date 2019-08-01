@@ -132,6 +132,13 @@ static View previous_view;
         currentviewholder.getTexttoast().setTextColor(getColor(context,color_id));
         return kt;
     }
+    public  KoushikToast setToastIcon(int icon_id)
+    {
+        currentviewholder.getToastIcon().setVisibility(View.VISIBLE);
+
+        currentviewholder.getToastIcon().setBackground(getDrawable(context,icon_id));
+        return kt;
+    }
 
 
 

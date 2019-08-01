@@ -18,12 +18,13 @@
         android:paddingRight="24dp"
         android:paddingBottom="8dp">
 
-        <!--<ImageView-->
-            <!--android:id="@+id/toast_icon"-->
-            <!--android:layout_width="20dp"-->
-            <!--android:layout_height="20dp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:src="@drawable/ic_info_outline_black_24dp" />-->
+        <ImageView
+            android:id="@+id/toast_icon1"
+            android:layout_width="20dp"
+            android:visibility="gone"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_error" />
 
         <TextView
             android:id="@+id/texttoast"
