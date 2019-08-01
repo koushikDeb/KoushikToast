@@ -1,9 +1,17 @@
 # Koushik Toast
 
-Create toast with custom duration in (seconds) without changing your known toast writing pattern
+Create toast with custom duration(in seconds),toast icon,toast background,toast text color without changing your known toast writing pattern
 ```
 KoushikToast.makeText(this,"toast text",10).show();
 ```
+
+## Screenshots
+
+<img src="/Images/default.png" height="400" alt="Screenshot"/> <img src="/Images/default with drawable in background.png" height="400" alt="Screenshot"/>  <img src="/Images/toastwithicon.png" height="400" alt="Screenshot"/>
+
+<img src="/Images/drawblewithtextcolor.png" height="400" alt="Screenshot"/>       <img src="/Images/onlycolor.png" height="400" alt="Screenshot"/>     <img src="/Images/onlyImage.png" height="400" alt="Screenshot"/> 
+
+
 
 ## Getting Started
 You Will need SYSTEM_ALERT_WINDOW permission as I am using Windowmanager.
@@ -61,12 +69,14 @@ allprojects {
 	}
 ```
 
-And 
+And keep your minSdkVersion 16
 
 ```
 dependencies {
-	        implementation 'com.github.koushikDeb:KoushikToast:v1.6'
-	}
+
+      implementation 'com.github.koushikDeb:KoushikToast:v1.7
+
+}
 ```
 
 
@@ -75,20 +85,47 @@ dependencies {
 No need to change your known toast writing pattern  
 
 ```
-    KoushikToast.makeText(this,"test Tast text",10).show();
+    KoushikToast.makeText(this,"Your text",10).show();
 ```
 
-Above line will  show "test Tast text" in a toast for 10 seconds 
+Above line will  show "Your text" in a toast for 10 seconds 
 
-### Parameter Breakup
+### Parameter Breakup of default toast
 ```
     KoushikToast.makeText(CONTEXT,STRING TO DISPLAY ,DURATION IN SECONDS).show();
+        
+```
+### Other usefull method 
+
+For Custom Icon:
+
+```
+.setToastIcon(R.drawable.your_icon)//example Toast with love
+```
+For Custom Tost Background:
+```
+.setBackgroundDrawable(R.drawable.default_shape2) //for drawable resource
+
+OR
+
+.setBackgroundColor(R.color.yourcolor)//for color 
+
+```
+For Text Color
+```
+ .setTextColor(android.R.color.white)
 ```
 
+### Note: You can use above methods in any order after calling make text just remember to call ".show()" at the end  :P
 
 
+## Developed by
 
+Koushik Deb [Linkedin](https://www.linkedin.com/in/koushik-deb-19562385)
 
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](/LICENSE) file for details
 
 
 
