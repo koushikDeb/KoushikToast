@@ -1,6 +1,7 @@
-# Koushik Toast
+# Android Toast library
+# custom Android Toast using KoushikToast  
 
-Create toast with custom duration(in seconds),toast icon,toast background,toast text color without changing your known toast writing pattern
+Create Android toast with custom duration(in seconds),toast icon,toast background,toast text color without changing your known toast writing pattern
 ```
 KoushikToast.makeText(this,"toast text",10).show();
 ```
