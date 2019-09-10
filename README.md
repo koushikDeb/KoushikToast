@@ -1,4 +1,4 @@
-# Android Toast library (for completly customizable android Toast)
+# Android Toast library (for completly customizable android Toast) 
 # custom Android Toast using KoushikToast  
 
 Create Android toast with custom duration(in seconds),toast icon,toast background,toast text color without changing your known toast writing pattern
@@ -123,6 +123,8 @@ For Text Color
 ## Developed by
 
 Koushik Deb [Linkedin](https://www.linkedin.com/in/koushik-deb-19562385)
+
+##Android toast custom 
 
 ## License
 
